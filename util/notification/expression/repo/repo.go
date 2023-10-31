@@ -69,8 +69,8 @@ func FullNameByRepoURL(rawURL string) string {
 	}
 
 	path := gitSuffix.ReplaceAllString(parsed.Path, "")
-	if pathParts := text.SplitRemoveEmpty(path, "/"); len(pathParts) >= 2 {
-		return strings.Join(pathParts[:2], "/")
+	if pathParts := text.SplitRemoveEmpty(path, "/"); len(pathParts) >= 4 {
+		return strings.Join(pathParts[:4], "/")
 	}
 
 	return path
